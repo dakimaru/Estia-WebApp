@@ -15,15 +15,7 @@ html, body {
    padding-bottom:150px;   /* Height of the footer */
 }
 
-#footer {
-   position:relative;
-   clear:both;
-	 margin-top: -100px; /* negative value of footer height */
-}
-
 /* header */
-#header {
-}
 
 #logo {
 	float: left;
@@ -45,7 +37,7 @@ html, body {
   background-color: black;
 	background-image: -moz-linear-gradient(top, #12a5f4);
   background-image: -ms-linear-gradient(top, #12a5f4);
-  background-image: -webkit-gradient(linear, 0% 0%, 25% 0%, from(#12a5f4), to(white));
+  background-image: -webkit-gradient(linear, 0% 0%, 20% 0%, from(#12a5f4), to(white));
 	background-image: -webkit-linear-gradient(top, #22a5f4);
   /* background-image: -webkit-linear-gradient(top, #67c9f7, #e3efff); */
   background-image: -o-linear-gradient(top, #22a5f4);
@@ -54,10 +46,15 @@ html, body {
 
 }
 
-/* footer */
+/* sticky footer */
 footer {
 	
-   height:100px;   /* Height of the footer */
+  position:relative;
+  clear:both;
+	margin-top: -100px; /* negative value of footer height */
+  height:100px;   /* Height of the footer */
+
+	
 	background-image: -webkit-linear-gradient(bottom, #12a5f4 0%, white 100%);
 	background-image: -moz-linear-gradient(bottom, #12a5f4 0%, white 100%);
 	background-repeat: repeat-x;
@@ -78,5 +75,5 @@ footer {
 #Copyright{
 	clear: both;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 20px;
 }
