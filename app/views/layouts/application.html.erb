@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+		
 	<head>
 		<title><%= full_title(yield(:title))%></title>
 		<%= stylesheet_link_tag    "application", :media => "all" %>
@@ -9,8 +10,25 @@
 	</head>
 	
 	<body>
+		
+		<div id="container">
+			
+				<div id="header">
+					<%= render 'layouts/header'%>
+				</div>
+		
+				<div id="main">
+					<%= yield %>
+				</div>
+				
+		</div>
+		
+		<div id="footer">
+			<%= render 'layouts/footer' %>
+		</div>
 
-	<%= yield %>
-
+		
+		
 	</body>
+	
 </html>
