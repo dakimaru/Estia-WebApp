@@ -1,0 +1,18 @@
+<div id="myCarousel" class="carousel slide">
+
+  <div class="carousel-inner">
+    <div class="active item"><%= image_tag("villa3.jpg", alt: "SORRY >.<") %></div>
+    <div class="item"><%= image_tag("villa.jpg", alt: "SORRY >.<")%></div>
+    <div class="item"><%= image_tag("villa-2.jpg", alt: "SORRY >.<")%></div>
+		
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+<script type="text/javascript">
+   $('.carousel').carousel({
+	interval: 6000
+});
+</script>
