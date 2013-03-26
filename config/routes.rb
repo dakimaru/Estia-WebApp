@@ -1,5 +1,6 @@
 Estia::Application.routes.draw do
 
+
   root to: 'static_pages#home'
   
   match '/about', to: 'static_pages#about'
@@ -7,7 +8,11 @@ Estia::Application.routes.draw do
   match '/support', to: 'static_pages#support'
   match '/jobs', to: 'static_pages#jobs'
   match '/news', to: 'static_pages#news'
-  match '/contact', to: 'static_pages#contact'
+  # match '/contact', to: 'static_pages#contact'
+ 
+  match 'contact' => 'messages#new', :as => 'contact', :via => :get
+  match 'contact' => 'messages#create', :as => 'contact', :via => :post
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

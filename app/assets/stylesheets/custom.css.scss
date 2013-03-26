@@ -11,7 +11,8 @@ html, body {
 }
 
 #main {
-   padding-bottom:150px;   /* Height of the footer */
+   padding-bottom:300px;   /* Height of the footer */
+	 padding-top:30px;
 }
 
 .center {
@@ -52,8 +53,10 @@ footer {
 	
   position:relative;
   clear:both;
-	margin-top: -100px; /* negative value of footer height */
-  height:100px;   /* Height of the footer */
+	margin-top: -120px; /* negative value of footer height */
+  height:120px;   /* Height of the footer */
+
+	padding-top:20px;
 
 	
 	background-image: -webkit-linear-gradient(bottom, #12a5f4 0%, white 100%);
@@ -77,6 +80,6 @@ footer {
 	clear: both;
 	text-align: center;
 	font-weight: bold;
-	padding-top: 20px;
-	color: $grayDarker;
+	padding-top: 30px;
+	color: gray;
 }
