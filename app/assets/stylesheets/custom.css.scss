@@ -2,31 +2,19 @@
 
 /* universal */
 
-html, body, .container, .content {
+html, body {
     height: 100%;
 }
- 
-.container, .content {
-    position: relative;
-}
- 
-.proper-content {
-    padding-top: 40px; /* >= navbar height */
-}
- 
+
 .wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -60px; /* same as the footer */
+    margin: 0px auto -100px; /* same as the footer */
 }
  
 .push {
     height: 100px; /* pushes footer so that it does not overlap with content */
-}
-.footer-wrapper {
-    position: relative;
-    height: 100px;
 }
 
 /* sticky footer */
