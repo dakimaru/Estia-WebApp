@@ -7,6 +7,9 @@ gem 'bootstrap-sass'
 
 gem 'sqlite3'
 
+gem 'jquery-rails'
+
+gem 'active_attr'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -14,8 +17,8 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
   
@@ -25,8 +28,19 @@ group :assets do
 
 end
 
+gem "rspec-rails", :group => [:test, :development]
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+end
 
-gem 'jquery-rails'
+group :development do
+  gem "growl"
+  gem "growl_notify"
+  gem "rb-fsevent"
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -42,5 +56,3 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-
-gem 'active_attr'
