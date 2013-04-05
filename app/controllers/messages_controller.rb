@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  #before_filter :authorize, only: [:create]  to let them use create action only if logged in
+  
   def new
     @message = Message.new
   end
