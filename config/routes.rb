@@ -1,5 +1,5 @@
 Estia::Application.routes.draw do
-
+  
   root to: 'static_pages#home'
   
   match 'signup', to: 'users#new'
@@ -19,6 +19,7 @@ Estia::Application.routes.draw do
   
   resources :users
   resources :sessions
+  resources :password_resets
 
   
   # The priority is based upon order of creation:

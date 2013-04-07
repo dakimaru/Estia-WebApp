@@ -1,0 +1,11 @@
+<%= form_for @user, :html => { :multipart => true } do |f| %>
+    <%= render 'layouts/error_messages', object: f.object %>
+
+		<%= f.label :password %>
+    <%= f.text_field :password %>
+	
+		<div class="form-actions">
+			<%= f.submit "Change my password", class: "btn btn-large btn-primary" %>
+			<%= link_to "Cancel", user_path, class: "btn btn-large"%>
+		</div>
+<% end %>

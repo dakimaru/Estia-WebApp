@@ -7,20 +7,20 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to redirect_back_or user, :flash => { :success => "Logged In!"}
+      if params[:remember_me]
+        cookies.permanent[:auth_token] = user.auth_token
+      else
+        cookies[:auth_token] = user.auth_token
+      end
+      redirect_to user, :flash => { :success => "Logged In!"}
     else
       flash.now[:danger] = "Email or password is invalid!"
       render "new"
     end
   end
-
-  def show
-    @user = User.find(params[:id])
-  end
   
   def destroy
-    session[:user_id] = nil
+    cookies.delete(:auth_token)
     redirect_to root_url, :flash => { :success => "Logged out successfully!"}
   end
 end
