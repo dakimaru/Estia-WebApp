@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       UserMailer.signup_confirmation(@user).deliver
-      redirect_to root_url, :flash => { :success => "Thank you for signing up with Estia!"}
+      redirect_to @user, :flash => { :success => "Thank you for signing up with Estia!"}
     else
       render "new"
     end
