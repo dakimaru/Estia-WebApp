@@ -8,6 +8,25 @@ Estia::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  ################
+
+    # Change mail delvery to either :smtp, :sendmail, :file, :test
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "estiastay.com",
+      user_name: ENV["GMAIL_USERNAME"],
+      password: ENV["GMAIL_PASSWORD"],
+      authentication: "plain",
+      enable_starttls_auto: true
+    }
+
+    config.action_mailer.raise_delivery_errors = true
+
+    config.action_mailer.default_url_options = { :host => "www.estiastay.com" }
+  ################
+  
+  
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
 
@@ -64,5 +83,4 @@ Estia::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  config.action_mailer.default_url_options = { :host => "www.estiastay.com" }
 end
