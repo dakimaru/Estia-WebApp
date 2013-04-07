@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 
 ruby '1.9.3'
 gem  'rails', '3.2.13'
-gem "heroku"
+gem 'heroku'
 
 gem 'bootstrap-sass'
 # Bundle edge Rails instead:
@@ -32,7 +32,16 @@ group :assets do
 
 end
 
-gem "rspec-rails", :group => [:test, :development]
+group :development, :test do
+  gem 'sqlite3'
+  gem "rspec-rails"
+end
+
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
+
 group :test do
   gem "factory_girl_rails"
   gem "capybara"
