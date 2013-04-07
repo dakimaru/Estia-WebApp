@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-gem 'rails', '3.2.11'
+ruby '1.9.3'
+gem  'rails', '3.2.13'
+gem "heroku"
+
 gem 'bootstrap-sass'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

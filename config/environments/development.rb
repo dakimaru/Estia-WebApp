@@ -14,7 +14,7 @@ Estia::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
 ################
 
@@ -30,7 +30,7 @@ Estia::Application.configure do
   }
 
   # Specify what domain to use for mailer URLs
-  config.action_mailer.default_url_options = {host: "localhost:3000"}
+  config.action_mailer.default_url_options = {host: "www.estiastay.com"}
   
 ################
   # Print deprecation notices to the Rails logger
