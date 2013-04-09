@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title><%= full_title(yield(:title))%></title>
+	<%= metamagic %>
+	<%= metamagic :title => "Estia", :description => "Estia is a web-platform that enables people to list their properties during their absence and effortlessly find visitors who are willing to occupy it.", :keywords => %w(estia sublet lease) %>
 	<%= stylesheet_link_tag    "application", :media => "all" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>

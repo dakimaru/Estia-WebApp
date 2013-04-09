@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'active_attr'
 gem 'bcrypt-ruby', '~> 3.0.0' # To use ActiveModel has_secure_password
 gem "paperclip", "~> 3.0"
+gem 'metamagic'
 
 # Gems used only for assets and not required
 # in production environments by default.
