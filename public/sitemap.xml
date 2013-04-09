@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.estiastay.com/</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/login</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/signup</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/about</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/how_it_works</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/support</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/jobs</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/news</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/contact</loc>
+</url>
+<url>
+  <loc>http://www.estiastay.com/password_resets/new</loc>
+</url>
+</urlset>
