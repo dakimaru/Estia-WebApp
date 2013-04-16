@@ -11,7 +11,7 @@ Estia::Application.routes.draw do
   match '/support', to: 'static_pages#support'
   match '/jobs', to: 'static_pages#jobs'
   match '/news', to: 'static_pages#news'
-
+  match '/terms_and_conditions', to: 'static_pages#terms_and_conditions'
   
  
   match 'contact' => 'messages#new', :as => 'messages', :via => :get
