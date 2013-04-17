@@ -1,5 +1,5 @@
 Estia::Application.routes.draw do
-  
+
   root to: 'static_pages#home'
   
   match 'signup', to: 'users#new'
@@ -18,6 +18,7 @@ Estia::Application.routes.draw do
   match 'contact' => 'messages#create', :as => 'messages', :via => :post
   
   resources :users
+  resources :listings
   resources :sessions
   resources :password_resets
 

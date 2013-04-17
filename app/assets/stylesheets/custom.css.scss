@@ -4,6 +4,9 @@
 
 html, body {
     height: 100%;
+		background-image:url(bgimage.jpg);
+		background-repeat:repeat-x;
+		background-size: 110% auto;
 }
 
 .wrapper {
