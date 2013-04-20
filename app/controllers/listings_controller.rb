@@ -1,5 +1,6 @@
 class ListingsController < ApplicationController
   def new
+    @listing = Listings.new 
   end
 
   def create

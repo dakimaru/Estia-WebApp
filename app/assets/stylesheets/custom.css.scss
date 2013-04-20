@@ -4,7 +4,8 @@
 
 html, body {
     height: 100%;
-		background-image:url(bgimage.jpg);
+		background-color:#F5FFFA;
+		/*background-image:url(bgimage.jpg);*/
 		background-repeat:repeat-x;
 		background-size: 110% auto;
 }
@@ -57,6 +58,7 @@ footer {
 #nav ul {
     display: inline-block;
     list-style-type: none;
+		
 }
 
 /* navbar-inner */
@@ -70,6 +72,7 @@ footer {
   background-image: -o-linear-gradient(top, #22a5f4);
   background-image: linear-gradient(top, #22a5f4);
   background-repeat: repeat-x;
+	/*font-size:150%;*/
 
 }
 

@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   
-  
   def new
   end
 
@@ -20,7 +19,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    cookies.delete(:auth_token)
+    sign_out
     redirect_to root_url, :flash => { :success => "Logged out successfully!"}
   end
 end

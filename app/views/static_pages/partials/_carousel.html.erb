@@ -1,22 +1,50 @@
 <div id="myCarousel" class="carousel slide">
 
-  <div class="carousel-inner">
-    <div class="active item"><%= image_tag("Homepage1.jpg", alt: "SORRY >.<") %></div>
-    <div class="item"><%= image_tag("Homepage2.jpg", alt: "SORRY >.<")%></div>
-    <div class="item"><%= image_tag("Homepage3.jpg", alt: "SORRY >.<")%></div>
-		<div class="item"><%= image_tag("villa3.jpg", alt: "SORRY >.<")%></div>
-		<div class="item"><%= image_tag("Homepage4.jpg", alt: "SORRY >.<")%></div>
-		<div class="item"><%= image_tag("Homepage5.jpg", alt: "SORRY >.<")%></div>
-		
-		
-  </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	<div class="carousel-inner">
+		<div class="active item"><%= image_tag("Homepage1.jpg", alt: "SORRY >.<") %>
+			<div class="carousel-caption">
+				<p>Experience new environments</p>
+			</div>
+		</div>
+		<div class="item"><%= image_tag("Homepage2.jpg", alt: "SORRY >.<")%>
+			<div class="carousel-caption">
+				<p>At different places, with different style</p>
+			</div>
+		</div>
+		<div class="item"><%= image_tag("Homepage3.jpg", alt: "SORRY >.<")%>
+			<div class="carousel-caption">
+				<p>Stay at places you only dreamed of</p>
+			</div>
+		</div>
+		<div class="item"><%= image_tag("Homepage4.jpg", alt: "SORRY >.<")%>
+			<div class="carousel-caption">
+				<p>Go for vacation and truly experience how people live there</p>
+			</div>
+		</div>
+		<div class="item"><%= image_tag("Homepage5.jpg", alt: "SORRY >.<")%>
+			<div class="carousel-caption">
+				<p>And enjoy it just like a hotel, with all the privacy you need.</p>
+			</div>
+		</div>
+		<div class="item"><%= image_tag("Homepage6.jpg", alt: "SORRY >.<")%>
+			<div class="carousel-caption">
+				<p>It's just so much better. Because you feel at home</p>
+			</div>
+		</div>
+		<div class="item"><%= image_tag("Homepage7.jpg", alt: "SORRY >.<")%>
+			<div class="carousel-caption">
+				<p>And wherever you go, it's always clean and tidy. Just like a hotel. Guaranteed!</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- Carousel nav -->
+	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
 <script type="text/javascript">
-   $('.carousel').carousel({
+$('.carousel').carousel({
 	interval: 6000
 });
 </script>
