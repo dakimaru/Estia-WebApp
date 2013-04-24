@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       if params[:remember_me]
-        cookies.permanent[:auth_token] = user.auth_token
+        cookies.permanent[:remember_token] = user.remember_token
       else
-        cookies[:auth_token] = user.auth_token
+        cookies[:remember_token] = user.remember_token
       end
       redirect_to user, :flash => { :success => "Logged In!"}
     else
