@@ -5,13 +5,16 @@
 html, body {
 	min-width:1000px;
 	height:100%; /*needed because otherwise the footer will not work properly. If you just leave out, will not work for safari.*/
-	/*background-color:#F5F5F5;
+	
+	/*
 	background-repeat: repeat;
 	background-image:url('header/body_texture.jpg');
-	background-size: 10% auto;*/
+	background-size: 10% auto;
+	*/
 }
 
 .wrapper {
+	background-color:#F5F5F5;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
