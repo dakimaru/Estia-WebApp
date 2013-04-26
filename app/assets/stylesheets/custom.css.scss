@@ -2,7 +2,7 @@
 
 /* universal */
 
-html, body {
+html,body {
 	min-width:1000px;
 	height:100%; /*needed because otherwise the footer will not work properly. If you just leave out, will not work for safari.*/
 	
@@ -154,7 +154,7 @@ footer {
 	background-image: -webkit-linear-gradient(bottom, #12a5f4 0%, #F5F5F5 100%);
 	background-image: -moz-linear-gradient(bottom, #12a5f4 0%, white 100%);
 	background-repeat: repeat-x;
-
+	
 	div {
 		color: $gray;
 		font-weight: bold;
@@ -165,8 +165,10 @@ footer {
 	a {
 		font-weight:bold;
 	}
+	
 	/* Copyright */
 	#Copyright{
+		padding-top:10px;
 		clear: both;
 		text-align: center;
 		font-weight: bold;
@@ -174,6 +176,10 @@ footer {
 		opacity:0.7;
 	}
 
+}
+
+.navbar {
+	margin-bottom: 0px;
 }
 
 .center {

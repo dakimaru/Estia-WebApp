@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title><%= full_title(yield(:title))%></title>
-	<%= favicon_link_tag 'favicon.ico'%>
-	<%= metamagic %>
-	<%= stylesheet_link_tag    "application", :media => "all" %>
-	<%= javascript_include_tag "application" %>
-	<%= csrf_meta_tags %>
-	<%= render 'layouts/shim' %>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-</head>
+	<head>
+		<title><%= full_title(yield(:title))%></title>
+		<%= favicon_link_tag 'favicon.ico'%>
+		<%= metamagic %>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	</head>
 
-<body>
-	<div class="wrapper">
-		<%= render 'layouts/header'%>
-		<% if current_page?('/') %>
-		
-			
+	<body>
+		<div class="wrapper">
+			<%= render 'layouts/header'%>
+			<% if current_page?('/') %>
 
-		<%= render 'static_pages/partials/carousel'%>
 
-		<% end %>
-		<div class="container" style="padding-top: 20px;">
-			<% flash.each do |key, value| %>
-			<div class="alert alert-<%= key %>"><%= value %></div>
+
+			<%= render 'static_pages/partials/carousel'%>
+
 			<% end %>
+			<div class="container" style="padding-top: 20px;">
+				<% flash.each do |key, value| %>
+				<div class="alert alert-<%= key %>"><%= value %></div>
+				<% end %>
 
-			<%= yield %>
-		</div>
-		<div class="push"></div>
-	</div><!-- wrapper finish -->
+				<%= yield %>
+			</div>
+			<div class="push"></div>
+		</div><!-- wrapper finish -->
 
-	<%= render 'layouts/footer' %>
-</body>
+		<%= render 'layouts/footer' %>
+	</body>
 </html>
