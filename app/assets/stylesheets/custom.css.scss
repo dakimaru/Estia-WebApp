@@ -22,7 +22,7 @@ html, body {
 }
 
 .push {
-	height: 100px; /* pushes footer so that it does not overlap with content */
+	height: 150px; /* pushes footer so that it does not overlap with content */
 }
 
 /* header */
@@ -86,6 +86,11 @@ body {
 }
 
 /* body specific formatting */
+
+.home_sections{
+	border-bottom: 2px dotted red;
+	padding: 20px;
+}
 
 #gray {
 	/* IE10 */ 

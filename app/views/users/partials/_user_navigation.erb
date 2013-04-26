@@ -1,0 +1,30 @@
+<div class="well span9">
+	<div class="span4" >
+		<%= image_tag("homepage/Property4.jpg", alt: "Property1", style: "max-height: 175px; padding: 25px 25px 0 25px;")%>
+		<h3 class="text-center">Find a Place</h3>
+		<h5>Clean and private places can be hard to find.<br>
+			We ensure that every property on our website meets these criteria.<br> 
+			Browse our listings and find the best one for you.
+		</h5>
+		<%= link_to "Browse Listings", signup_path, class: "btn btn-large btn-info" %>
+	</div>
+
+	<div class="span4">
+		<%= image_tag("homepage/post_my_place.png", alt: "list place", style: "max-height: 200px;")%>
+		<h3 class="text-center">Rent Your Place</h3>
+		<h5>You can rent your place at any city we operate. Simply choose your price, availability and let us know when you are leaving.<br>
+			The rest is on us. We will accommodate visitors, clean, and drop off keys.
+		</h5>
+		<%= link_to "List my Place", signup_path, class: "btn btn-primary btn-large" %>
+	</div>
+
+	<div class="span4">
+		<%= image_tag("homepage/cleaner.png", alt: "cleaner", style: "max-height: 150px; padding: 25px;")%>
+		<h3 class="text-center">Use Our Services</h3>
+		<h5>Need only cleaning or key drop-off service? Just let us know where and when!<br>
+			Whether you use other home sharing websites, need to clean your place, or just need to deliver keys, we are here to help.
+		</h5>
+		<%= link_to "Choose Services", signup_path, class: "btn btn-success btn-large"%>
+	</div>
+
+</div>
