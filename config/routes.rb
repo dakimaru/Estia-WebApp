@@ -1,5 +1,10 @@
 Estia::Application.routes.draw do
-
+  
+  resources :users
+  resources :listings
+  resources :sessions
+  resources :password_resets
+  
   root to: 'static_pages#home'
   
   match 'signup', to: 'users#new'
@@ -17,10 +22,7 @@ Estia::Application.routes.draw do
   match 'contact' => 'messages#new', :as => 'messages', :via => :get
   match 'contact' => 'messages#create', :as => 'messages', :via => :post
   
-  resources :users
-  resources :listings
-  resources :sessions
-  resources :password_resets
+  
 
   
   # The priority is based upon order of creation:

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  
+
   def new
   end
 
@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       else
         cookies[:remember_token] = user.remember_token
       end
-      redirect_to user, :flash => { :success => "Logged In!"}
+      redirect_to user, :flash => { :success => "Welcome back"}
     else
       flash.now[:danger] = "Email or password is invalid!"
       render "new"

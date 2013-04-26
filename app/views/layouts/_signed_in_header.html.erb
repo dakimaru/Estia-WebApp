@@ -1,6 +1,8 @@
-<%= link_to( image_tag("estia_logo_color.png", :class => 'header_logo'), user_path) %>
+<%= link_to( image_tag("estia_logo_color.png", :class => 'header_logo'), current_user) %>
 <ul class="nav pull-right">
-	<li style="font-weight: bold; color: grey; padding-top: 10px;"><%= @user%> </li>
-	<li style="font-weight: bold;"><%= link_to "Home", user_path %></li>
-	<li style="font-weight: bold;"><%= link_to "Log Out", logout_path %></li>
-</ul>
+	<li style="font-weight: bold; color: grey; padding-top: 10px; padding-right: 40px;">Signed in as: <%= current_user.first_name%> <%= current_user.last_name%> </li>
+
+		<li style="font-weight: bold;"><%= link_to "Home", current_user %></li>
+
+		<li style="font-weight: bold;"><%= link_to "Log Out", logout_path %></li>
+	</ul>

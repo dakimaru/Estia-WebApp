@@ -1,9 +1,9 @@
 <header class="navbar navbar-static-top">
 	<div class="navbar-inner">
-			<% if signed_in %>
-			<%= render 'layouts/signed_in_header'%>
+			<% if current_user %>
+				<%= render 'layouts/signed_in_header'%>
 			<% else %>
-			<%= render 'layouts/default_header'%>
+				<%= render 'layouts/default_header'%>
 			<% end %>
 	</div>
 </header>

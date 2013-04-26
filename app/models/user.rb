@@ -20,13 +20,14 @@
 #
 
 class User < ActiveRecord::Base
+  attr_accessible :first_name, :last_name, :email, :password, :avatar
+  has_attached_file :avatar
   has_secure_password
   
   before_save { |user| user.email = user.email.downcase }
   before_create { generate_token(:remember_token)}
     
-  attr_accessible :email, :first_name, :last_name, :password, :avatar
-  has_attached_file :avatar
+  
   
   
   validates :first_name, presence: true, length: { minimum: 2, maximum: 50 }

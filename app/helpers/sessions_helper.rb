@@ -36,4 +36,9 @@ module SessionsHelper
     redirect_to login_path, alert: "Please login first" if current_user.nil?
   end
   
+  def redirect_back_or(default)
+    redirect_to(session[:return_to] || default)
+    session.delete(:return_to)
+  end
+  
 end
