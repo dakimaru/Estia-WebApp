@@ -24,18 +24,19 @@ class User < ActiveRecord::Base
   has_attached_file :avatar
   has_secure_password
   
+  has_many :listings, dependent: :destroy
+  
   before_save { |user| user.email = user.email.downcase }
   before_create { generate_token(:remember_token)}
     
-  
-  
-  
+
   validates :first_name, presence: true, length: { minimum: 2, maximum: 50 }
   validates :last_name, presence: true, length: { minimum: 2, maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence:   true,
                     format:     { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
+  validates :password, length: { minimum: 6 }
   #validates :password, length: { minimum: 3 }
   
   def send_password_reset
