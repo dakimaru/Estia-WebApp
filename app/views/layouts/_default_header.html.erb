@@ -1,6 +1,6 @@
-<%= link_to image_tag("estia_logo.png", :id => 'header_logo', :border => 0), root_path %>
+<%= link_to image_tag("estia_logo.png", :class => 'header_logo', :border => 0), root_path %>
 <ul class="nav pull-right">
-	<li> <div class="btn" style="font-weight: bold;"><%= link_to "Sign In", login_path %></div></li>
-	<li> <div class="btn" style="font-weight: bold;"><%= link_to "Sign Up", signup_path %></div></li>
-	<li><div class="btn btn-warning" style="font-weight: bold;"  href="#">List Property</div></li>
+	<a class="btn nav-button" href="sessions/new">Sign In</a>
+	<a class="btn btn-primary nav-button" href="users/new">Sign Up</a>
+	<a class="btn btn-warning nav-button" href="users/new">List Property</a>
 </ul>
