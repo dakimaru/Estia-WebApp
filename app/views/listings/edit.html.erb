@@ -55,16 +55,15 @@
 		<% end %>
 		
 		<legend>Below are your uploaded photos (if any exist)</legend>
+		<p>To delete images, check the box and hit save.</p>
 		
 		
-		<% f.fields_for :listing_photos do |listing_photo| %>
+		<%= f.fields_for :listing_photos do |listing_photo| %>
        
-         <% unless listing_photo.object.new_record? %>
+    		<% unless listing_photo.object.new_record? %>
        
-               <div class="thumbnail">
-                       <%= link_to( image_tag(listing_photo.object.photo.url(:thumb)), listing_photo.object.photo.url(:original) ) %>
+    		<%= link_to image_tag(listing_photo.object.photo.url(:thumb)), listing_photo.object.photo.url(:original) %>
                        <%= listing_photo.check_box :_destroy %>
-               </div>
                
          <% end %>        
        
