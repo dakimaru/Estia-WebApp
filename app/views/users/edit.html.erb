@@ -1,7 +1,8 @@
 <% provide(:title, "Edit user") %> 
-<h1>Update your profile</h1>
 
-<div class="tabbable tabs-left offset1">
+<h3 style="text-align:center;">User Profile Edit</h3>
+
+<div class="well tabbable tabs-left offset1">
   <ul class="nav nav-tabs">
     <li class="active"><a href="#tab1" data-toggle="tab">Basic Info</a></li>
 		<li><a href="#tab2" data-toggle="tab">Security</a></li>
@@ -13,7 +14,7 @@
 				
 				<legend>Basic Info</legend>
 			  
-			<!--<= render 'basic_info' %> -->
+			<%= render 'basic_info' %>
 
 			  </div>
 			</div>					
@@ -23,7 +24,7 @@
 			  <div class="span6 offset1">
 				
 				<legend>Change Password</legend>
-			<!--<= render 'security' %>-->
+			<%= render 'security' %>
 				
 				</div>
     	</div>

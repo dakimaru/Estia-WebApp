@@ -16,11 +16,17 @@
 #  state          :string(255)
 #  zip_code       :integer
 #  country        :string(255)
+#  user_id        :integer
 #
 
 class Listing < ActiveRecord::Base
-  attr_accessible :title, :description, :property_type, :bedrooms, :bathrooms, :address_line_1, :address_line_2, :city, :state, :country, :zip_code
-  #belongs_to :user
+  attr_accessible :title, :description, :property_type, :bedrooms, :bathrooms, :address_line_1,
+                  :address_line_2, :city, :state, :country, :zip_code, :listing_photos_attributes
+  belongs_to :user
+  has_many :listing_photos, dependent: :destroy
+  accepts_nested_attributes_for :listing_photos, :allow_destroy => true
+  
+  
   
   validates :user_id, presence: true
   validates :title, length: { minimum: 3, maximum: 50 }

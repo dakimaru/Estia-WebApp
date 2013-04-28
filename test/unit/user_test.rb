@@ -17,6 +17,8 @@
 #  password_reset_token   :string(255)
 #  password_reset_sent_at :datetime
 #  remember_token         :string(255)
+#  phone_number           :integer
+#  admin                  :boolean
 #
 
 require 'test_helper'

@@ -17,10 +17,12 @@
 #  password_reset_token   :string(255)
 #  password_reset_sent_at :datetime
 #  remember_token         :string(255)
+#  phone_number           :integer
+#  admin                  :boolean
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :email, :password, :avatar
+  attr_accessible :first_name, :last_name, :email, :password, :avatar, :phone_number
   has_attached_file :avatar
   has_secure_password
   

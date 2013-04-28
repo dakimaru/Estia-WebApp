@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428023036) do
+ActiveRecord::Schema.define(:version => 20130428130826) do
+
+  create_table "listing_photos", :force => true do |t|
+    t.integer  "listing_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
 
   create_table "listings", :force => true do |t|
     t.datetime "created_at",     :null => false
@@ -51,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20130428023036) do
     t.datetime "password_reset_sent_at"
     t.string   "remember_token"
     t.integer  "phone_number"
+    t.boolean  "admin"
   end
 
 end

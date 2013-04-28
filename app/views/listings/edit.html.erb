@@ -1,2 +1,92 @@
-<h1>Listings#edit</h1>
-<p>Find me in app/views/listings/edit.html.erb</p>
+<% provide(:title, "Edit Project") %> 
+<legend>Edit Listing</legend>
+<div class="row">
+	<div class="span6 offset3">
+
+
+		<%= form_for @listing, :html => { :multipart => true } do |f| %>
+
+		<%= render 'layouts/error_messages', object: f.object %>
+
+		<legend>Listing Edit</legend>
+
+		<%= f.label :title, "Title" %>
+		<%= f.text_field :title, :maxlength => 50, :class => "span4" %>
+
+		<%= f.label :property_type, "Property Type" %>
+		<%= f.select :property_type, [ 'Room', 'Apartment', 'House', 'Villa', 'Car', 'Yacht' ], :prompt => '' %>
+
+		<%= f.label :bedrooms, "Bed Rooms" %>
+		<%= f.select :bedrooms, [ '1', '2', '3', '4', '5', '6' ], :prompt => ''  %>
+
+		<%= f.label :bathrooms, "Bath Rooms" %>
+		<%= f.select :bathrooms, [ '1', '2', '3', '4', '5', '6' ], :prompt => ''  %>
+
+		<%= f.label :description, "Description"%>
+		Characters left: <span id="char-count">400</span>
+		<%= f.text_area :description, :maxlength => 400, :rows => 8, :class => "span6", :placeholder => "This is where you would write why you're place is awesome! (Maximum of 400 characters)" %>
+
+		<legend >Address Information</legend>
+
+		<%= f.label :address_line_1, "Address Line 1" %>
+		<%= f.text_field :address_line_1 %>
+
+		<%= f.label :address_line_2, "Address Line 2" %>
+		<%= f.text_field :address_line_2 %>
+
+		<%= f.label :city, "City" %>
+		<%= f.text_field :city %>
+
+		<%= f.label :state, "State" %>
+		<%= f.text_field :state %>
+
+		<%= f.label :country, "Country" %>
+		<%= f.select :country, [ 'Cyprus', 'Greece', 'Japan', 'United Kingdom', 'United States'], :prompt => '' %>
+
+		<%= f.label :zip_code, "Zip Code" %>
+		<%= f.text_field :zip_code, maxlength: 5 %>
+
+		<%= f.fields_for :listing_photos do |listing_photo| %>
+
+			<% if listing_photo.object.new_record? %>
+				<%= listing_photo.file_field :photo %>
+			<% end %>
+
+		<% end %>
+		
+		<legend>Below are your uploaded photos (if any exist)</legend>
+		
+		
+		<% f.fields_for :listing_photos do |listing_photo| %>
+       
+         <% unless listing_photo.object.new_record? %>
+       
+               <div class="thumbnail">
+                       <%= link_to( image_tag(listing_photo.object.photo.url(:thumb)), listing_photo.object.photo.url(:original) ) %>
+                       <%= listing_photo.check_box :_destroy %>
+               </div>
+               
+         <% end %>        
+       
+    <% end %>
+
+		<div class="form-actions">
+			<%= f.submit "Save", class: "btn btn-primary" %>
+			<%= link_to "Cancel", listing_path, class: "btn"%>
+		</div>
+
+	<%end%>
+			
+	</div>
+
+</div>					
+
+
+
+
+<script type="text/javascript">	
+var maxLen = 400;
+$(function() { setCharCount($('#listing_description'));	}); 
+$('#listing_description').live('keyup keydown', function(e) { setCharCount($(this));	});	 
+function setCharCount(object) {	 var left = maxLen - object.val().length;	 $('#char-count').html(left);	}
+</script>

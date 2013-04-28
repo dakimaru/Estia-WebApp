@@ -2,10 +2,10 @@
     <%= render 'layouts/error_messages', object: f.object %>
 
 		<%= f.label :password %>
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
 	
 		<div class="form-actions">
-			<%= f.submit "Change my password", class: "btn btn-large btn-primary" %>
-			<%= link_to "Cancel", user_path, class: "btn btn-large"%>
+			<%= f.submit "Change password", class: "btn btn-primary" %>
+			<%= link_to "Cancel", user_path, class: "btn"%>
 		</div>
 <% end %>

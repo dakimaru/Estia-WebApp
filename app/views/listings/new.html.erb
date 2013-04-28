@@ -2,7 +2,7 @@
 	<legend >Basic Property Information</legend>
 	<div class="well" id="gray">
 
-		<%= form_for(@listing, :url => {:controller => 'listings', :action => 'create'}) do |f| %>
+		<%= form_for(@listing, :html => { :multipart => true }, :url => {:controller => 'listings', :action => 'create'}) do |f| %>
 
 		<%= render 'layouts/error_messages', object: f.object %>
 		

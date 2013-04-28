@@ -16,6 +16,7 @@
 #  state          :string(255)
 #  zip_code       :integer
 #  country        :string(255)
+#  user_id        :integer
 #
 
 require 'spec_helper'
