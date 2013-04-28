@@ -1,24 +1,58 @@
-<div class="span4" style="padding-left: 20px;">
+<div class="span8 offset2">
+	<legend >Basic Property Information</legend>
+	<div class="well" id="gray">
 
-	<h3>List your Property</h3>
+		<%= form_for(@listing, :url => {:controller => 'listings', :action => 'create'}) do |f| %>
 
-	<%= form_for :listing, :url => {:controller => 'listings', :action => 'create'} do |f| %>
+		<%= render 'layouts/error_messages', object: f.object %>
+		
+		<%= f.label :title, "Title" %>
+		<%= f.text_field :title, :maxlength => 50, :class => "span4" %>
 
-	<%= f.label :first_name, "Address Line 1" %>
-	<%= f.text_field :first_name %>
+		<%= f.label :property_type, "Property Type" %>
+		<%= f.select :property_type, [ 'Room', 'Apartment', 'House', 'Villa', 'Car', 'Yacht' ], :prompt => '' %>
 
-	<%= f.label :last_name, "Apartment Number" %>
-	<%= f.text_field :last_name %>
+		<%= f.label :bedrooms, "Bed Rooms" %>
+		<%= f.select :bedrooms, [ '1', '2', '3', '4', '5', '6' ], :prompt => ''  %>
 
-	<%= f.label :email, "City" %>
-	<%= f.text_field :email %>
+		<%= f.label :bathrooms, "Bath Rooms" %>
+		<%= f.select :bathrooms, [ '1', '2', '3', '4', '5', '6' ], :prompt => ''  %>
 
-	<%= f.label :password, "Zip Code" %>
-	<%= f.password_field :password %>
+		<%= f.label :description, "Description"%>
+		<%= f.text_area :description, :maxlength => 400, :rows => 8, :class => "span6", :placeholder => "This is where you would write why you're place is awesome! (Maximum of 500 characters)" %>
 
-	<div>
-		<%= f.submit "List Property", class: "btn btn-warning"%>
 	</div>
+
+
+	<legend >Address Information</legend>
+	<div class="well" id="gray">
+
+		<%= f.label :address_line_1, "Address Line 1" %>
+		<%= f.text_field :address_line_1 %>
+
+		<%= f.label :address_line_2, "Address Line 2" %>
+		<%= f.text_field :address_line_2 %>
+		
+		<%= f.label :city, "City" %>
+		<%= f.text_field :city %>
+		
+		<%= f.label :state, "State" %>
+		<%= f.text_field :state %>
+		
+		<%= f.label :country, "Country" %>
+		<%= f.select :country, [ 'Cyprus', 'Greece', 'Japan', 'United Kingdom', 'United States'], :prompt => '' %>
+
+		<%= f.label :zip_code, "Zip Code" %>
+		<%= f.text_field :zip_code, maxlength: 5 %>
+
+	</div>
+
+	<div class="form-actions ">
+		<%= link_to "Cancel", root_path, :class => "btn"%>
+		<%= f.submit "List Property", class: "btn btn-warning", style: "font-weight: bold;"%>
+
+	</div>
+
 	<% end %>
-	
+
 </div>

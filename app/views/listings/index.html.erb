@@ -1,0 +1,10 @@
+<legend>Listings</legend>
+
+<% for listing in @listings %>
+	<div class="well">
+		<h4><%= listing.title%><h4>
+		<h5><%= listing.description %><h5>
+	</div>
+<% end %>
+
+<%= will_paginate @listings, class: "apple_pagination" %>

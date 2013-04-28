@@ -11,11 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424083454) do
+ActiveRecord::Schema.define(:version => 20130428023036) do
 
   create_table "listings", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "title"
+    t.text     "description"
+    t.string   "property_type"
+    t.integer  "bedrooms"
+    t.integer  "bathrooms"
+    t.string   "address_line_1"
+    t.string   "address_line_2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip_code"
+    t.string   "country"
+    t.integer  "user_id"
   end
 
   create_table "messages", :force => true do |t|
@@ -38,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20130424083454) do
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.string   "remember_token"
+    t.integer  "phone_number"
   end
 
 end
