@@ -15,15 +15,8 @@
 	<div class="wrapper">
 		<%= render 'layouts/header'%>
 
-
-		<% if current_page?('') and current_user %>
-
-		<%= render 'products/show'%>
-
-		<% elsif current_page?('/') %>
-
+		<% if current_page?('/') %>
 		<%= render 'static_pages/partials/carousel'%>
-
 		<% end %>
 
 		<div class="container" style="padding-top: 20px;">

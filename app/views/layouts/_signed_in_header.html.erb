@@ -1,6 +1,6 @@
 <% username = current_user.first_name + " " + current_user.last_name %>
 
-<%= link_to( image_tag("estia_logo_color.png", :class => 'header_logo'), current_user) %>
+<%= link_to( image_tag("estia_logo_color.png", :class => 'header_logo'), root_path) %>
 
 <div class="nav pull-right">
 
@@ -8,7 +8,7 @@
 	
 	<%= link_to username, current_user, :class=>'btn nav-button' %>
 
-	<a href="#" class="btn btn-inverse dropdown " style="font-weight: bold;" data-toggle="dropdown">
+	<a href="#" class="btn btn-inverse dropdown" style="font-weight: bold;" data-toggle="dropdown">
 		Account <b class="caret"></b>
 	</a>
 	
